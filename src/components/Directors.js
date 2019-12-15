@@ -6,7 +6,6 @@ const Directors = () => {
     <React.Fragment>
       <h1>Directors Page</h1>
       {directors.map((director, i) => {
-        // return <Director key={i} director={director} />
         return <div key={i}>
           <h2>{director.name}</h2>
           <ul>
