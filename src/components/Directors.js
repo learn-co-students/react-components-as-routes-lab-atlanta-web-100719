@@ -3,9 +3,21 @@ import { directors } from '../data';
 
 const Directors = () => {
   return (
-    <div>
-      {/*{code here}*/}
-    </div>
+    <React.Fragment>
+      <h1>Directors Page</h1>
+      {directors.map((director, i) => {
+        // return <Director key={i} director={director} />
+        return <div key={i}>
+          <h2>{director.name}</h2>
+          <ul>
+            {director.movies.map((movie, i) => {
+              return <li key={i}>{movie}</li>
+            })}
+          </ul>
+        </div>
+      })}
+
+    </React.Fragment>
   );
 }
 
